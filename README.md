@@ -11,5 +11,5 @@ yarn bootstrap
 yarn start
 
 # Running the talk
-yarn start serve
+yarn run serve
 
