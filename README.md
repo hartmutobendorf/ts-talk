@@ -13,3 +13,4 @@ yarn start
 # Running the talk
 yarn run serve
 
+open your browser at http://localhost:5000/examples/ts
