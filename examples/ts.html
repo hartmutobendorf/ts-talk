@@ -1,0 +1,160 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Markdown in impress.js | by Henrik Ingo @henrikingo</title>
+  
+  <meta name="description" content="TypeScript vs JavaScript" />
+  <meta name="author" content="Hartmut Obendorf" />
+  <link rel="stylesheet" href="../../extras/highlight/styles/github.css">
+
+  <!-- Common styles for example presentations -->  
+  <link href="../css/impress-common.css" rel="stylesheet" />  
+  <!--
+      Styles specific for this example presentation. 
+  -->
+  <link href="markdown/css/markdown-slides.css" rel="stylesheet" />
+  <link href="markdown/css/devopsy.css" rel="stylesheet" />
+  <link href="markdown/css/effects.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+<div id="impress" data-transition-duration="1000">
+  <div id="title" class="step slide markdown" data-x="0" data-y="0" data-rel-x="0" data-rel-y="700" data-scale="5">
+# TypeScript
+## Eine Einführung
+
+### hartmut@obendorf.de, 2020.
+  </div>
+  <div id="agenda" class="step slide markdown" data-x="0" data-y="-1400" data-rotate="0" data-scale="1">
+# Agenda
+
+* Was kann diese Vorlesung leisten?
+* Kontext: Geschichte, Idee, Bedeutung
+* Was macht TypeScript besonders?
+* Nutzen und Einsatz
+  </div>
+  <div id="disclaimer" class="step slide markdown" data-x="0" data-y="400" data-rotate="90" data-scale="0.5">
+# Was kann eine Vorlesung leisten?
+
+* ~~Programmiersprache lehren~~
+* ~~APIs lehren~~
+* Kontext geben: Warum gibt es diese Sprache überhaupt und welche Bedeutung hat sie?
+  Sollte ich sie mir ansehen?
+* Besonderheiten aufzeigen
+* Einordnung vorschlagen: wofür ist die Sprache gut?
+  </div>
+
+  <div class="step slide" data-x="-3000" data-y="-3000">
+    <h1>Kontext - Timeline</h1>
+
+    <a href="https://time.graphics/line/155170" target="_window"><img style="width: 800px" src="ts-talk/ts-timeline.png" /></a>
+  </div>
+
+  <div class="step slide" data-x="-1500" data-y="-3000">
+    <iframe src="https://octoverse.github.com/#top-languages" width="1024" height="760" allowFullScreen
+      frameBorder="0"></iframe>
+  </div>
+  <div class="step slide" data-x="0" data-y="-3000">
+    <a target="_window"
+      href="https://trends.google.de/trends/explore?cat=31&date=today%205-y&q=%2Fm%2F0h52xr1,%2Fm%2F0n50hxv,%2Fm%2F0dsbpg6">
+      <img src="ts-talk/ts-trends.png" style="width: 900" title="Google Trends comparison" />
+    </a>
+    <!-- script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0h52xr1","geo":"","time":"today 5-y"},{"keyword":"/m/0n50hxv","geo":"","time":"today 5-y"}],"category":31,"property":""}, {"exploreQuery":"cat=31&date=today%205-y&q=%2Fm%2F0h52xr1,%2Fm%2F0n50hxv","guestPath":"https://trends.google.de:443/trends/embed/"}); </script -->
+  </div>
+  
+  <div class="step slide" data-x="1500" data-y="-3000">
+    <h3>Introducing Typescript – Anders Hejlsberg</h3>
+    <iframe src="https://channel9.msdn.com/posts/Anders-Hejlsberg-Introducing-TypeScript/player" width="960" height="540"
+      allowFullScreen frameBorder="0"
+      title="Anders Hejlsberg: Introducing TypeScript - Microsoft Channel 9 Video"></iframe>
+  </div>
+  
+  <div class="step slide" data-x="3000" data-y="-3000">
+    <h3>Inside Typescript – Hejlsberg, Lucco, Hoban</h3>
+    <iframe src="https://channel9.msdn.com/posts/Anders-Hejlsberg-Steve-Lucco-and-Luke-Hoban-Inside-TypeScript/player"
+      width="960" height="540" allowFullScreen frameBorder="0"
+      title="Anders Hejlsberg, Steve Lucco, and Luke Hoban: Inside TypeScript - Microsoft Channel 9 Video"></iframe>
+  </div>
+
+  <div class="step slide markdown" data-x="0" data-y="1200">
+# Warum wurde Typescript entwickelt?
+
+* Microsoft: Erfahrungen aus dem Office 365-Team.
+* Große Projekte: Viel Code, viele Entwickler, viele Fehler.
+* Typ-affine Entwicklungsleiter:
+  * Anders Hejlsberg (C#, Turbo Pascal) / Steve Lucco / Luke Hoban
+  * Erich Gamma (VS Code, Eclipse, Gang of Four / Design Patterns)
+  </div>
+
+  <div class="step slide markdown" data-rel-x="0" data-rel-y="1000">
+# Was macht Typescript besonders?
+
+* Typsystem für dynamisch typisierte Sprache! 
+* Superset von JavaScript!
+* Transpiling (tsc / babel)
+* Browser, Debugger sehen nur JS
+
+> type system for tooling sake, not for performance sake. (traditionally the scope of type systems in compilers)
+
+> super-fast lookup service knowing everything about the dom, and about [jquery, node] - the API.
+  </div>
+
+  <div class="step" data-x="0" data-y="11000" data-scale="10" data-rotate="30">
+    <q>Jetzt aber mal Butter bei die Fische...</q><br />
+    Auf zum Typescript Playground...
+  </div>
+
+  <div class="step" data-x="0" data-y="5200" data-rotate="0" data-scale="2">
+    <iframe style="position: relative; left: -400px; top: -200px" width="1600" height="1024" src="  http://localhost:8000/play" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="step slide markdown" data-x="0" data-y="7000">
+## Fazit: Leitfragen zum Einsatz von TS
+* Are your apps big?
+* Do you work on a team?
+* Unfamiliar codebases?
+* Non JS developers that need to write JS code?
+
+=> TypeScript ist die bessere Alternative zu JS
+  </div>
+  
+  <div id="nextsteps" class="step slide" data-rel-x="0" data-rel-y="900">
+    <h3>For your Next Steps</h3>
+    <ul>
+      <li><a target="_window" href="https://stackblitz.com/edit/react-ts-df6eme?file=Basic.tsx">Do some Formik forms...</a>
+      </li>
+      <li><a target="_window"
+          href="https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#intersection-types">Intersection
+          Types simple</a></li>
+      <li><a target="_window"
+          href="https://dsargent3220.gitbooks.io/typescript-2-handbook/content/Advanced%20Types.html">Intersection types
+          complex example</a></li>
+      <li><a target="_window"
+          href="https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-0.html">TypeScript 4.0 release
+          notes</a></li>
+      <li><a target="_window" href="https://www.youtube.com/watch?v=AQOEZVG2WY0">Goto: Why I was wrong about TypeScript</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="overview" class="step" data-x="5000" data-y="4000" data-scale="14" style="pointer-events: none;" data-rotate="5">
+  </div>
+</div>
+
+<!--
+<div id="impress-toolbar"></div>
+<div id="impress-help"></div>
+-->
+
+<!-- Extra modules
+     Load highlight.js, mermaid.js and markdown.js from extras.
+     See also src/plugins/extras/extras.js -->
+<script type="text/javascript" src="../extras/highlight/highlight.pack.js"></script>
+<script type="text/javascript" src="../extras/mermaid/mermaid.min.js"></script>
+<script type="text/javascript" src="../extras/showdown/showdown.js"></script>     
+
+<script type="text/javascript" src="../../js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
